@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Walking</title>
+    <link rel="icon" type="image/x-icon" href="cheeseburger.png">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        img{
+            width:100vw;
+            height:100vh;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .walkPanda{
+            margin-top:200px;
+            background-image: url(panda_colour.png);
+            width:250px;
+            height:350px;
+            animation: panda 1s steps(6) infinite, walk 2.5s linear infinite;
+        }
+        .road{
+            /* border-bottom: 7px dashed black; */
+        }
+        @keyframes panda{
+            0%{background-position: 0px;}
+            100%{background-position: 3000px;}
+        }
+        @keyframes walk{
+            0%{transform: translateX(-500px);}
+            100%{transform: translateX(1275px);}
+        }
+
+    </style>
+</head>
+<body>
+    <img src="/grass.jpg">
+    <div class="walkPanda"></div>
+    <div class="road"></div>
+</body>
+</html>
